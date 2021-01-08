@@ -1,0 +1,173 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+header {
+  width: 90%;
+  padding: 5%;
+  background-size: 100%;
+  height: fit-content;
+}
+header > img {
+  width: 20%;
+}
+header > div > h2 {
+  margin-bottom: 0;
+  color: red;
+}
+header > div > p {
+  margin-top: 0;
+  color: grey;
+}
+
+.glasses {
+  width: 95%;
+  margin:0 2.5%;
+  padding: 0;
+}
+.glasses > h3 {
+    text-align: center;
+  color: grey;
+  margin:10px 2.5%;
+}
+.glasses > .categories {
+  width:100%;
+  padding:0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin:0 0 50px 0;
+}
+.glasses > .categories > li {
+  padding: 5%;
+  width: 37.5%;
+  text-align: center;
+  border-radius: 5px;
+  /* background-color: rgba(238, 238, 238, 0.349);
+  border: 2px solid #eee;*/
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+.glasses > .categories > li:hover {
+  transition: all 0.4s;
+  box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.09);
+}
+.glasses > .categories > li > img {
+  width: 100%;
+}
+.glasses > .categories > li > h4 {
+  margin: 0 auto;
+  color: #333;
+}
+
+footer {
+  width: 90%;
+  padding: 20px 5%;
+  margin-top: auto;
+  background-color: #333;
+}
+#owner {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 5%;
+}
+#owner > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  margin: auto;
+  background-color: #eee;
+}
+#owner > p {
+  margin: 20px auto 0 auto;
+  color: #eee;
+  font-size: 1.1rem;
+}
+
+#contact > ul {
+  text-align: center;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  color: #eee;
+  font-size: 0.9rem;
+}
+#contact > ul > h4 {
+  color: grey;
+  margin-bottom: 0;
+}
+#contact > ul > li > p {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+/*tab view*/
+@media only screen and (min-width: 700px) {
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  header > img {
+    margin-right: auto;
+    margin-left: 2.5%;
+  }
+  .glasses > .categories > li {
+    text-align: center;
+    width: 20.5%;
+  }
+  #contact {
+    display: flex;
+    justify-content: space-around;
+  }
+  #contact > ul {
+    width: 50%;
+  }
+}
+/*computer view*/
+@media only screen and (min-width: 900px) {
+  header {
+    padding: 20px 5%;
+  }
+  header > img {
+    width: 130px;
+    
+  }
+  header > div > h2 {
+    font-size: 2rem;
+  }
+  header > div > p {
+    font-size: 1.3rem;
+  }
+  .glasses > .categories > li {
+    padding: 2.5%;
+    width: 10.5%;
+  }
+  footer {
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #owner {
+    width: 30%;
+    padding: 0;
+  }
+
+  #contact {
+    width: 70%;
+    margin: auto;
+  }
+  #contact > ul {
+    width: 50%;
+  }
+}
