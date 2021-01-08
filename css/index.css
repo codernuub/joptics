@@ -21,7 +21,7 @@ header > img {
 }
 header > div > h2 {
   margin-bottom: 0;
-  color: red;
+  color: #f44336;
 }
 header > div > p {
   margin-top: 0;
@@ -30,29 +30,29 @@ header > div > p {
 
 .glasses {
   width: 95%;
-  margin:0 2.5%;
+  margin:2.5%;
   padding: 0;
 }
 .glasses > h3 {
-    text-align: center;
   color: grey;
-  margin:10px 2.5%;
+  margin: 10px 2.5%;
 }
+
 .glasses > .categories {
-  width:100%;
-  padding:0;
+  width: 100%;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
-  margin:0 0 50px 0;
+  margin:0;
 }
 .glasses > .categories > li {
   padding: 5%;
   width: 37.5%;
   text-align: center;
   border-radius: 5px;
-  /* background-color: rgba(238, 238, 238, 0.349);
+  /*background-color: rgba(238, 238, 238, 0.349);
   border: 2px solid #eee;*/
   margin: 0 0 10px 0;
   border-radius: 5px;
@@ -68,6 +68,26 @@ header > div > p {
 .glasses > .categories > li > h4 {
   margin: 0 auto;
   color: #333;
+}
+
+.service > p {
+    margin:10px 2.5%;
+    font-size: 1rem;
+    color:#333;
+}
+.service > ul {
+  display: flex;
+  list-style: none;
+  margin-top: 0;
+  padding: 0 2.5%;
+}
+.service > ul > li {
+  width: fit-content;
+  background-color:#f44336;
+  color: white;
+  border-radius: 5px;
+  margin: 10px 2.5% 0 0;
+  padding: 10px 2.5%;
 }
 
 footer {
@@ -141,7 +161,6 @@ footer {
   }
   header > img {
     width: 130px;
-    
   }
   header > div > h2 {
     font-size: 2rem;
