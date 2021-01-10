@@ -1,0 +1,45 @@
+header {
+  width: 80%;
+  padding: 5% 10%;
+  background-size: 100%;
+  height: fit-content;
+}
+header > img {
+  width: 20%;
+}
+header > div > h2 {
+  margin-bottom: 0;
+  color: #f44336;
+}
+header > div > p {
+  margin-top: 0;
+  color: grey;
+}
+
+/*tab view*/
+@media only screen and (min-width: 700px) {
+  header {
+    display: flex;
+  }
+  header > img {
+    width: 15%;
+    margin-right: auto;
+    margin-left: 2.5%;
+  }
+}
+
+/*computer view*/
+@media only screen and (min-width: 900px) {
+  header {
+    padding: 20px 5%;
+  }
+  header > img {
+    width: 120px;
+  }
+  header > div > h2 {
+    font-size: 2rem;
+  }
+  header > div > p {
+    font-size: 1.3rem;
+  }
+}
