@@ -29,7 +29,7 @@
   left: -50%;
   transition: all 0.4s;
 }
-.steps > .step:nth-child(7) > div {
+.steps > .step:nth-child(5) > div {
   left: -200%;
 }
 .steps > .step:nth-child(odd):hover > div {
@@ -52,7 +52,7 @@
   background-color: #333;
   transform: rotate(45deg);
 }
-.steps > .step:nth-child(7):hover > div > p > span {
+.steps > .step:nth-child(5):hover > div > p > span {
   left: 60%;
 }
 .steps > .step:nth-child(even) {

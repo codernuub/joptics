@@ -38,20 +38,16 @@
         <li class="step">
             3
             <div>
-                <p>preview product <span></span></p>
-            </div>
-        </li>
-        <li class="step"></li>
-        <li class="step">
-            4
-            <div>
-                <p>publish product <span></span></p>
+                <p>publish product<span></span></p>
             </div>
         </li>
     </ul>
     <!--steps-->
     <h3>Enter product details</h3>
     <form>
+        <label>Collection</label>
+        <select style="color:grey;width: 100%;" placeholder="Select category" name="category" required>
+        </select>
         <label>Brand name</label>
         <select style="color:grey;width: 100%;" placeholder="Select brand" name="brand" required>
         </select>
@@ -59,8 +55,15 @@
         <input name="model" required />
         <label>Product price</label>
         <input name="price" />
-        <label>Description</label>
-        <textarea name="description" name="description"></textarea>
+        <label>Frame size</label>
+        <div class="size">
+            <label>small</label>
+            <input type="checkbox" value="small" name="size"/>
+            <label>medium</label>
+            <input type="checkbox" value="medium" name="size"/>
+            <label>large</label>
+            <input type="checkbox" value="checkbox" name="size"/>
+        </div>
         <button>submit</button>
     </form>
 </body>
