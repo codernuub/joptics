@@ -1,0 +1,125 @@
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+/*product details*/
+h3, h4, .price {
+  margin: 20px 10%;
+  color: #333;
+}
+
+/*image slider*/
+.product-images {
+  width: 80%;
+  padding: 20px 5%;
+  margin: 0 5%;
+  display: flex;
+  overflow-x: scroll;
+}
+.product-images::-webkit-scrollbar {
+  display: none;
+}
+.product-images > img {
+  width:60%;
+  margin-right: 5%;
+  border-radius: 5px;
+}
+
+/*upload image*/
+.upload-image {
+  padding:20px 0;
+  background-color: #f44336;
+}
+.upload-image > .details {
+  list-style: none;
+  padding: 0;
+  margin:20px 10%;
+}
+.upload-image > .details > li {
+  margin:10px 0;
+  color: #eee;
+}
+.upload-image > .details > li > span:nth-child(3){
+  color: #333;
+}
+
+/*upload image form*/
+.upload-image >form {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 20px 5%;
+  max-width: 400px;
+  margin: auto auto 0 auto;
+  border-radius: 5px;
+}
+.upload-image >form > button {
+  background-color: #f44336;
+  color: white;
+  width: 35%;
+  font-size: 1rem;
+  min-width: 120px;
+  padding: 3% 2.5%;
+  border-radius: 5px;
+  box-shadow:0px 0px 15px 4px rgba(0, 0, 0, 0.080);
+  border: transparent;
+  margin: 0;
+}
+.upload-image >form > .file {
+  color: grey;
+  border-radius: 5px;
+  padding: 2.5%;
+  position: relative;
+  width: fit-content;
+  margin: 0;
+  border: 1px solid grey;
+  border-radius:5px;
+}
+.upload-image >form > .file > p {
+  margin: 0;
+}
+.upload-image >form > .file > input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+/*product details*/
+.product-details > .price {
+  font-size: 1.2rem;
+}
+.product-details > .details {
+  list-style: none;
+  padding: 0;
+  margin: 20px 10%;
+}
+.product-details > .details > li {
+  margin: 10px 0;
+  color: grey;
+}
+.product-details > .details > li > span:nth-child(2) {
+  color: #333;
+}
+
+@media only screen and (min-width: 600px) {
+  .product-images > .images {
+    flex-wrap: wrap;
+  }
+  .product-images > .images > img {
+    width: 20%;
+    margin: 0 2.5% 0 0;
+  }
+  .upload-image > form {
+    width: 80%;
+    padding: 20px 5%;
+    max-width: 300px;
+    margin: auto 5% 5% 5%;
+    border-radius: 5px;
+  }
+}
