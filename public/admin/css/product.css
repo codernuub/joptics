@@ -108,10 +108,10 @@ h3, h4, .price {
 }
 
 @media only screen and (min-width: 600px) {
-  .product-images > .images {
+  .product-images {
     flex-wrap: wrap;
   }
-  .product-images > .images > img {
+  .product-images > img {
     width: 20%;
     margin: 0 2.5% 0 0;
   }

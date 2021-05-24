@@ -1,6 +1,5 @@
 const router = require('express').Router();
 
-const { dirname } = require('path');
 const path = require('path');
 
 router.get('/login', (req, res) => {
@@ -8,7 +7,7 @@ router.get('/login', (req, res) => {
     res.sendFile(file)
 });
 router.get('/upload', (req, res) => {
-    const file = path.resolve(__dirname, '../admin/step1.html');
+    const file = path.resolve(__dirname, '../admin/upload.html');
     res.sendFile(file)
 });
 router.get('/product', (req, res) => {

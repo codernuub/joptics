@@ -1,24 +1,20 @@
 html {
-  height: 100%;
   user-select: none;
 }
-
 body {
-  display: flex;
-  flex-direction: column;
+  width:100%;
   padding: 0;
   margin: 0;
-  height: 100%;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 header {
+  display: flex;
   width: 90%;
-  padding: 5%;
-  background-size: 100%;
-  height: fit-content;
+  padding:5%;
 }
 header > img {
   width: 20%;
+  margin-right: 20px;
 }
 header > div > h2 {
   margin-bottom: 0;
@@ -29,19 +25,20 @@ header > div > p {
   color: grey;
 }
 
+/*global style*/
 .glasses {
-  width: 95%;
-  margin:2.5%;
-  padding: 0;
+  width: 90%;
+  margin:0%;
+  padding:5%;
 }
-.glasses > h3 {
+.glasses > h2 {
   font-weight:500;
   margin: 10px 2.5%;
   text-align: center;
   color:grey;
 }
-
-.glasses > .categories {
+/*global style end*/
+.categories > ul {
   list-style: none;
   display: flex;
   justify-content:center;
@@ -50,53 +47,51 @@ header > div > p {
   padding: 0;
   margin:0;
 }
-.glasses > .categories > li {
+.categories > ul > li {
   width:40%;
   margin:5%;
   text-align: center;
 }
-.glasses > .categories > li > img {
+.categories > ul > li > img {
   width: 100%;
 }
-.glasses > .categories > li > h4 {
+.categories > ul > li > h4 {
   margin: 0 auto;
-  color: #333;
-  font-weight:500;
+  color: grey;
+  font-weight:lighter;
+  font-size:1rem;
 }
-
+/*service*/
+.service {
+  background-color: #eee;
+}
+.service > h2 {
+  color:black;
+}
+.service > ul {
+  width:fit-content;
+  margin:0 auto;
+  padding:0;
+}
+.service  > ul > li {
+  width: fit-content;
+  display: block;
+  margin:20px 0;
+  font-size:1.1rem;
+  word-wrap: none;
+}
+/*service end*/
 /*brands*/
-.glasses > .brands {
+.brands > ul {
   text-align: center;
   list-style: none; 
   padding:0;
 }
-
-.glasses > .brands > li {
+.brands > ul > li {
   display: inline-block;
   margin:2.5%;
 }
-
-/*servces*/
-.service > p {
-    margin:10px 2.5%;
-    font-size: 1rem;
-    color:#333;
-}
-.service > ul {
-  display: flex;
-  list-style: none;
-  margin-top: 0;
-  padding: 0 2.5%;
-}
-.service > ul > li {
-  width: fit-content;
-  background-color:#f44336;
-  color: white;
-  border-radius: 5px;
-  margin: 10px 2.5% 0 0;
-  padding: 10px 2.5%;
-}
-
+/*brands end*/
 footer {
   width:100%;
   margin-top: auto;
@@ -165,9 +160,9 @@ footer > p {
     margin-right: auto;
     margin-left: 2.5%;
   }
-  .glasses > .categories > li {
+  .categories > ul > li {
     text-align: center;
-    width: 20.5%;
+    width: 30%;
   }
   #contact {
     display: flex;
