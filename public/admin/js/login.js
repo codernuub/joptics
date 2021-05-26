@@ -8,7 +8,7 @@ form.addEventListener('submit', async (e) => {
     data["password"] = e.target.elements.password.value;
     const res = await login(data);
     if(res.status === "success") 
-      window.location.href = "/admin/upload";
+      window.location.href = "/admin";
     else 
       console.log(res.message);
   }catch(err) {
