@@ -1,10 +1,12 @@
 const router = require('express').Router();
+
+const authController = require('../../controller/auth');
 const productController = require('../../controller/products');
 
 router.route('/')
-    .post(productController.createProduct)
-    .get(productController.fetchProducts);
+    .post(authController.preventUnauthApiAccess, productController.createProduct)
+    .get(authController.preventUnauthApiAccess, productController.fetchProducts);
 
-router.route('/:id').delete(productController.deleteProduct);
+router.route('/:id').delete(authController.preventUnauthApiAccess, productController.deleteProduct);
 
 module.exports = router;

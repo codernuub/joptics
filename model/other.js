@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const collectionSchema = Schema({
+const categorySchema = Schema({
     name: {
-        name: String,
+        type: String,
         required: true
     },
     createdAt: {
@@ -14,7 +14,7 @@ const collectionSchema = Schema({
 
 const brandSchema = Schema({
     name: {
-        name: String,
+        type: String,
         required: true
     },
     createdAt: {
@@ -23,5 +23,5 @@ const brandSchema = Schema({
     }
 })
 
-exports.Collection = mongoose.model('collection', collectionSchema);
+exports.Category = mongoose.model('category', categorySchema);
 exports.Brand = mongoose.model('brand', brandSchema);

@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 const app = require('./app');
 const mongoose = require('mongoose');
 
-const url = process.env.MONGOURI || "http://127.0.0.1:27017";
+const url = process.env.MONGOURI || "mongodb://127.0.0.1:27017/eyewear";
 
 mongoose.connect(url, {
     useNewUrlParser: true,

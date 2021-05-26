@@ -4,7 +4,7 @@ exports.createProduct = async (req, res) => {
     try {
         const product = await Product.create({
             name: req.body.price,
-            collection: req.body.collection,
+            category: req.body.category,
             brand: req.body.brand,
             price: req.body.price,
             details: req.body.details

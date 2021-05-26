@@ -1,8 +1,8 @@
-const { Collection } = require('../model/other');
+const { Category } = require('../model/other');
 
-exports.createCollection = async (req, res) => {
+exports.createCategory = async (req, res) => {
     try {
-        const collection = await Collection.create({
+        const collection = await Category.create({
             name: req.body.name
         }).save();
         return res.status(201).json({ status: "success", data: { collection } });
@@ -11,9 +11,9 @@ exports.createCollection = async (req, res) => {
     }
 }
 
-exports.fetchCollections = async (req, res) => {
+exports.fetchCategories = async (req, res) => {
     try {
-        const collections = await Collection.find();
+        const collections = await Category.find();
         return res.status(200).json({
             status: "success", data: {
                 collections
@@ -24,9 +24,9 @@ exports.fetchCollections = async (req, res) => {
     }
 }
 
-exports.deleteCollection = async (req, res) => {
+exports.deleteCategory = async (req, res) => {
     try {
-        await Collection.deleteOne({ _id: req.params.id });
+        await Category.deleteOne({ _id: req.params.id });
         return res.status(200).json({
             status: "success", data: null
         })

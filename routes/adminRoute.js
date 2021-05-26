@@ -1,17 +1,18 @@
 const router = require('express').Router();
-
+const authController = require('../controller/auth');
 const path = require('path');
 
 router.get('/login', (req, res) => {
-    const file = path.resolve(__dirname, '../admin/login.html');
+    if (req.cookies.token) return res.redirect('/admin/upload');
+    const file = path.resolve('public/admin/login.html');
     res.sendFile(file)
 });
-router.get('/upload', (req, res) => {
-    const file = path.resolve(__dirname, '../admin/upload.html');
+router.get('/upload', authController.preventUnauthPageAccess, (req, res) => {
+    const file = path.resolve('public/admin/upload.html');
     res.sendFile(file)
 });
-router.get('/product', (req, res) => {
-    const file = path.resolve(__dirname, '../admin/product.html');
+router.get('/product', authController.preventUnauthPageAccess, (req, res) => {
+    const file = path.resolve('public/admin/product.html');
     res.sendFile(file);
 });
 
