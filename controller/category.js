@@ -2,10 +2,10 @@ const { Category } = require('../model/other');
 
 exports.createCategory = async (req, res) => {
     try {
-        const collection = await Category.create({
+        const category = await Category.create({
             name: req.body.name
-        }).save();
-        return res.status(201).json({ status: "success", data: { collection } });
+        })
+        return res.status(201).json({ status: "success", data: { category } });
     } catch (err) {
         return res.status(400).json({ status: "fail", message: err.message });
     }
@@ -13,10 +13,10 @@ exports.createCategory = async (req, res) => {
 
 exports.fetchCategories = async (req, res) => {
     try {
-        const collections = await Category.find();
+        const categories = await Category.find();
         return res.status(200).json({
             status: "success", data: {
-                collections
+                categories
             }
         })
     } catch (err) {

@@ -15,10 +15,15 @@ header > div > p {
   margin-top: 0;
   color: grey;
 }
-
+.content {
+  max-width:400px;
+  margin: auto;
+}
 /*tab view*/
 @media only screen and (min-width: 700px) {
   header {
+    width:95%;
+    padding: 20px 2.5%;
     display: flex;
   }
   header > img {
@@ -30,9 +35,7 @@ header > div > p {
 
 /*computer view*/
 @media only screen and (min-width: 900px) {
-  header {
-    padding: 20px 5%;
-  }
+
   header > img {
     width: 120px;
   }
